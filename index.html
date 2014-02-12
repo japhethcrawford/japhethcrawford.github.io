@@ -1,17 +1,13 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Advanced Web Design Class</title>
-	</head>
-	<body>
-	  	<a href="index.html"><h1>Japheth Crawford - Advanced Web Design</h1></a>
-		<a href="blog1.html"><h3>Week One - Project Status</h3></a>
-		<a href="blog2.html"><h3>Week One - Favorite Internet Things</h3></a>
-		<a href="blog4.html"><h3>Week Two - Project Status</h3></a>
-		<a href="blog3.html"><h3>Week Two - Favorite Internet Things</h3></a>
-		<a href="blog6.html"><h3>Week Three - Project Status</h3></a>
-		<a href="blog5.html"><h3>Week Three - Favorite Internet Things</h3></a>
-		
-		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	</body>
-</html>
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
