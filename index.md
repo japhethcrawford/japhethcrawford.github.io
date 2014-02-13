@@ -9,6 +9,16 @@ title: Home
 		<title>Advanced Web Design Class</title>
 	</head>
 	<body>
+	
+	<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
 	  	<a href="index.html"><h1>Japheth Crawford - Advanced Web Design</h1></a>
 		<a href="blog1.html"><h3>Week One - Project Status</h3></a>
 		<a href="blog2.html"><h3>Week One - Favorite Internet Things</h3></a>
